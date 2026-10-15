@@ -4,14 +4,22 @@ Front de **escuelatp** en Angular 16 + Bootstrap 5 + Bootstrap Icons. Habla solo
 
 ## Cómo correrlo
 
+El front **solo habla con el Gateway** (`http://localhost:8081`, se cambia en `src/app/config.ts`), así que **sin el backend levantado no hay login ni datos**. Primero el backend, después el front.
+
+### Opción 1: todo con Docker (recomendada)
+
+Con Docker Desktop abierto, seguir el README del repo [escuelatp](https://github.com/maximiliano-occhiuzzi/escuelatp): `docker compose up -d` levanta backend **y** este front (con nginx) en http://localhost:4200. No hace falta instalar Node.
+
+### Opción 2: solo el front, para desarrollo
+
+Requiere **Node 18 o superior** (probado con Node 22) y el backend ya levantado (Opción 1 de arriba o desde el IDE).
+
 ```bash
 npm install
 npm start          # http://localhost:4200
 ```
 
-Antes hay que tener el backend levantado (ver el README de `escuelatp`). El Gateway ya permite CORS desde el puerto 4200.
-
-Con Docker: el `docker-compose.yml` del backend construye este front (carpeta hermana `../escuelatp-front`) y lo publica en `http://localhost:4200` con nginx.
+El Gateway ya permite CORS desde el puerto 4200.
 
 ## Usuarios de prueba (los crea el backend al arrancar)
 
