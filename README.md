@@ -16,7 +16,7 @@ Requiere **Node 18 o superior** (probado con Node 22) y el backend ya levantado 
 
 ```bash
 npm install
-npm start          # http://localhost:4200
+ng serve          # http://localhost:4200
 ```
 
 El Gateway ya permite CORS desde el puerto 4200.
